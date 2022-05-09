@@ -261,8 +261,8 @@ def text_to_image(message):
                     '\n'.join(lessons),
                     font=font,
                     fill='black')
-                im.save(f'{directory}\\{user_id}.png')
                 path = f'{directory}\\{user_id}.png'
+                im.save(path)
                 with open(path, 'rb') as photo:
                     sent = bot.send_photo(message.chat.id, photo, reply_markup=markup)
                     bot.register_next_step_handler(sent, after_end)
