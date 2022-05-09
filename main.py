@@ -8,7 +8,7 @@ from PIL import Image, ImageDraw, ImageFont
 TOKEN = '5132155261:AAGX5L4hFzVhjPxoe3j0NEpClXqDPX_cvqg'
 bot = telebot.TeleBot(TOKEN)
 
-conn = sqlite3.connect('db/database.db', check_same_thread=False)
+conn = sqlite3.connect('files/database.db', check_same_thread=False)
 cursor = conn.cursor()
 
 morph = pymorphy2.MorphAnalyzer()
